@@ -75,3 +75,18 @@
   background-size: 2.5rem 2.5rem;
   background-repeat: space no-repeat;
 }
+
+/* Desktop */
+@media (min-width: 768px) {
+  .hero {
+    min-height: 26rem;
+    padding: 4rem 3rem;
+    background-image:
+      linear-gradient(to right, var(--marine) 25%, rgba(15, 31, 46, 0.5) 45%, transparent 65%),
+      url('/images/hero-viande.webp');
+  }
+
+  .hero__texte {
+    font-size: 1.125rem;
+  }
+}
