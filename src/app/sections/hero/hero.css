@@ -1,0 +1,92 @@
+
+
+/* fond marine + photo, avec un dégradé par-dessus */
+.hero {
+  background-color: var(--marine);
+  background-image:
+    linear-gradient(to right, var(--marine) 35%, rgba(15, 31, 46, 0.6) 70%, rgba(15, 31, 46, 0.2)),
+    url('/images/hero-viande.webp');
+  background-size: cover;
+  background-position: right center;
+  color: var(--blanc);
+  padding: 2.5rem 1.25rem;
+}
+
+/* Limite la largeur du texte pour qu'il ne passe pas sur toute la photo */
+.hero__contenu {
+  max-width: 30rem;
+}
+
+/* texte au-dessus du titre */
+.hero__surtitre {
+  margin: 0 0 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Icône du surtitre */
+.hero__surtitre svg {
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: -0.25em;
+  margin-right: 0.5em;
+  color: var(--rouge);
+}
+
+/* Titre principal */
+.hero__titre {
+  font-size: clamp(2.25rem, 9vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.hero__suite {
+  display: block;
+}
+
+/* Le mot « frais » */
+.hero__accent {
+  background: var(--rouge);
+  font-style: italic;
+  padding: 0 0.2em;
+  border-radius: 0.15em;
+}
+
+/* Accroche */
+.hero__texte {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+  max-width: 28rem;
+}
+
+/* Les boutons */
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Bande rouge */
+.hero__frise {
+  height: 2.5rem;
+  background-color: var(--rouge);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpolygon points='31.3,20 28,23.3 28,28 23.3,28 20,31.3 16.7,28 12,28 12,23.3 8.7,20 12,16.7 12,12 16.7,12 20,8.7 23.3,12 28,12 28,16.7' fill='none' stroke='white' stroke-opacity='0.5' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 2.5rem 2.5rem;
+  background-repeat: space no-repeat;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .hero {
+    min-height: 26rem;
+    padding: 4rem 3rem;
+    background-image:
+      linear-gradient(to right, var(--marine) 25%, rgba(15, 31, 46, 0.5) 45%, transparent 65%),
+      url('/images/hero-viande.webp');
+  }
+
+  .hero__texte {
+    font-size: 1.125rem;
+  }
+}

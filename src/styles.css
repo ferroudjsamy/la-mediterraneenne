@@ -1,1 +1,111 @@
-/* You can add global styles to this file, and also import other style files */
+/* =========================================================
+   Styles globaux — La Méditerranéenne
+   ========================================================= */
+
+/* Variables */
+:root {
+  --rouge: #d7141a;
+  --marine: #0f1f2e;
+  --creme: #f8f4ef;
+  --blanc: #ffffff;
+
+  --font-titre: 'DM Serif Display', Georgia, serif;
+  --font-texte: 'Inter', system-ui, sans-serif;
+}
+
+/* Reset : la largeur d'un élément inclut padding et bordure */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Page */
+body {
+  margin: 0;
+  background: var(--creme);
+  color: var(--marine);
+  font-family: var(--font-texte);
+  line-height: 1.5;
+}
+
+/* Titres */
+h1,
+h2,
+h3 {
+  font-family: var(--font-titre);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Afficher / cacher selon la taille d'écran (mobile-first)
+   Par défaut = mobile */
+.desktop-only {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .desktop-only {
+    display: revert !important; /* reprend l'affichage normal de la balise */
+  }
+
+  
+  .btn.desktop-only {
+    display: inline-flex !important;
+  }
+
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+/* Boutons réutilisables sur tout le site */
+.btn {
+  display: inline-flex; /* aligne icône + texte sur une ligne */
+  align-items: center; /* centre verticalement l'icône et le texte */
+  gap: 0.5rem; /* espace entre l'icône et le texte */
+  padding: 0.75rem 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 999px; 
+  font-family: var(--font-texte);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Icônes dans les boutons : même taille que le texte */
+.btn svg {
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0; /* l'icône ne s'écrase jamais */
+}
+
+/* Fond rouge plein */
+.btn--plein {
+  background: var(--rouge);
+  color: var(--blanc);
+}
+
+.btn--plein:hover {
+  background: #b01015; 
+}
+
+
+.btn--contour {
+  background: transparent;
+  color: var(--blanc);
+  border-color: var(--blanc);
+}
+
+.btn--contour:hover {
+  background: var(--blanc);
+  color: var(--marine);
+}
