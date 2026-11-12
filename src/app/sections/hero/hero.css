@@ -70,5 +70,8 @@
 /* Bande rouge */
 .hero__frise {
   height: 2.5rem;
-  background: var(--rouge);
+  background-color: var(--rouge);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpolygon points='31.3,20 28,23.3 28,28 23.3,28 20,31.3 16.7,28 12,28 12,23.3 8.7,20 12,16.7 12,12 16.7,12 20,8.7 23.3,12 28,12 28,16.7' fill='none' stroke='white' stroke-opacity='0.5' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 2.5rem 2.5rem;
+  background-repeat: space no-repeat;
 }
