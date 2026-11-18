@@ -3,8 +3,8 @@
     <img src="/images/logo-transparent.webp" alt="Boucherie-Épicerie La Méditerranéenne - Accueil" width="640" height="333">
   </a>
 
-  <nav class="header__nav desktop-only" aria-label="Navigation principale">
-    <ul class="header__liens">
+  <nav id="menu-principal" class="header__nav" [class.ouvert]="menuOuvert()" aria-label="Navigation principale">
+    <ul class="header__liens" (click)="fermerMenu()">
       <li><a routerLink="/" routerLinkActive="actif" [routerLinkActiveOptions]="{ exact: true }">Accueil</a></li>
       <li><a routerLink="/rayons" routerLinkActive="actif">Nos rayons</a></li>
       <li><a routerLink="/a-propos" routerLinkActive="actif">À propos</a></li>
@@ -17,7 +17,18 @@
     Appeler
   </a>
 
-  <button class="header__burger mobile-only" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
-    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+  <button
+    class="header__burger mobile-only"
+    type="button"
+    aria-controls="menu-principal"
+    [attr.aria-expanded]="menuOuvert()"
+    [attr.aria-label]="menuOuvert() ? 'Fermer le menu' : 'Ouvrir le menu'"
+    (click)="basculerMenu()"
+  >
+    @if (menuOuvert()) {
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    } @else {
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+    }
   </button>
 </header>
