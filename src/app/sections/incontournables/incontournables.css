@@ -1,0 +1,80 @@
+.incontournables {
+  padding: 0.5rem 1.25rem 1.75rem;
+}
+
+.incontournables__titre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  font-size: clamp(1.75rem, 7vw, 2.75rem);
+  text-align: center;
+}
+
+/* Traits rouges */
+.incontournables__titre::before,
+.incontournables__titre::after {
+  content: "";
+  width: 3rem;
+  height: 3px;
+  flex-shrink: 0;
+  background: var(--rouge);
+}
+
+.incontournables__liste {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.incontournables__carte {
+  height: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: var(--blanc);
+  box-shadow: 0 4px 12px rgba(15, 31, 46, 0.12);
+}
+
+.incontournables__carte img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.incontournables__nom {
+  padding: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .incontournables {
+    padding: 0 3rem 4rem;
+  }
+
+  .incontournables__titre {
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .incontournables__titre::before,
+  .incontournables__titre::after {
+    width: 5rem;
+  }
+
+  .incontournables__liste {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+
+  .incontournables__nom {
+    padding: 0.75rem;
+    font-size: 1.25rem;
+  }
+}
