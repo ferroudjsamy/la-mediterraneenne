@@ -20,6 +20,13 @@
   box-sizing: border-box;
 }
 
+/* Défilement fluide */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 /* Page */
 body {
   margin: 0;
