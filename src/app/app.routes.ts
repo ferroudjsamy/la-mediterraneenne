@@ -22,4 +22,11 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/contact/contact').then((m) => m.Contact),
     title: 'Contact | La Méditerranéenne',
   },
+  {
+    path: '**',
+    loadComponent: () =>
+      import('./pages/page-introuvable/page-introuvable').then((m) => m.PageIntrouvable),
+    title: 'Page introuvable | La Méditerranéenne',
+  },
+
 ];

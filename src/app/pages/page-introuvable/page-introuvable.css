@@ -1,0 +1,27 @@
+.page-introuvable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 3rem 1.25rem;
+  text-align: center;
+}
+
+.page-introuvable__code {
+  margin: 0;
+  color: var(--rouge);
+  font-family: var(--font-titre);
+  font-size: clamp(5rem, 25vw, 9rem);
+  line-height: 1;
+}
+
+.page-introuvable__titre {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.75rem, 7vw, 2.5rem);
+}
+
+.page-introuvable__texte {
+  max-width: 28rem;
+  margin: 0 0 1.75rem;
+}
