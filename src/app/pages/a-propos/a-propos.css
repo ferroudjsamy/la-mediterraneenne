@@ -1,0 +1,150 @@
+.a-propos {
+  padding: 2rem 1.25rem 1.5rem;
+}
+
+.a-propos__surtitre {
+  margin: 0 0 0.75rem;
+  color: var(--rouge);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.a-propos__titre {
+  max-width: 48rem;
+  font-size: clamp(1.75rem, 7vw, 3rem);
+}
+
+.a-propos__accent {
+  font-style: italic;
+}
+
+/* Histoire */
+.histoire {
+  display: grid;
+  gap: 1.25rem;
+  padding: 0 1.25rem 2rem;
+}
+
+.histoire__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(15, 31, 46, 0.15);
+}
+
+.histoire__titre {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.5rem, 6vw, 2.25rem);
+}
+
+.histoire__texte p {
+  margin: 0 0 1rem;
+}
+
+/* Engagements */
+.engagements {
+  padding: 0 1.25rem 2rem;
+}
+
+.engagements__titre {
+  margin-bottom: 1.25rem;
+  font-size: clamp(1.5rem, 6vw, 2.25rem);
+  text-align: center;
+}
+
+.engagements__liste {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.engagements__carte {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: var(--blanc);
+  box-shadow: 0 4px 12px rgba(15, 31, 46, 0.12);
+}
+
+.engagements__icone {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--rouge);
+}
+
+.engagements__nom {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.engagements__carte p {
+  margin: 0;
+}
+
+/* Visite */
+.visite {
+  margin: 0 1.25rem 2rem;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  background: var(--marine);
+  color: var(--blanc);
+  text-align: center;
+}
+
+.visite__titre {
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.5rem, 6vw, 2.25rem);
+}
+
+.visite__texte {
+  margin: 0 0 1.25rem;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .a-propos {
+    padding: 4rem 3rem 2.5rem;
+  }
+
+  .histoire {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+    padding: 0 3rem 4rem;
+  }
+
+  .histoire__texte {
+    font-size: 1.125rem;
+  }
+
+  .engagements {
+    padding: 0 3rem 4rem;
+  }
+
+  .engagements__titre {
+    margin-bottom: 2rem;
+  }
+
+  .engagements__liste {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .visite {
+    margin: 0 3rem 4rem;
+    padding: 3rem;
+  }
+}
+
+/* Grand écran */
+@media (min-width: 1200px) {
+  .engagements__liste {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
