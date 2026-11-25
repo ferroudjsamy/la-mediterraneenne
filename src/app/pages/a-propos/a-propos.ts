@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-a-propos',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './a-propos.html',
   styleUrl: './a-propos.css',
 })
