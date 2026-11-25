@@ -73,6 +73,21 @@ img {
   }
 }
 
+/* Surtitre rouge au-dessus des titres */
+.surtitre {
+  margin: 0 0 0.75rem;
+  color: var(--rouge);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Sur fond foncé */
+.surtitre--clair {
+  color: #ff6b70;
+}
+
 /* Boutons réutilisables sur tout le site */
 .btn {
   display: inline-flex; /* aligne icône + texte sur une ligne */

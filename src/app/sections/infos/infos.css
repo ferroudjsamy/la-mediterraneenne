@@ -11,14 +11,9 @@
   color: var(--blanc);
 }
 
-/* Rouge plus clair sur fond foncé */
 .infos__surtitre {
-  margin: 0 0 0.25rem;
-  color: #ff6b70;
+  margin-bottom: 0.25rem;
   font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
 }
 
 .infos__titre {

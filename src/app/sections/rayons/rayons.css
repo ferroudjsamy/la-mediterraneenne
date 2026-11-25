@@ -2,15 +2,6 @@
   padding: 1.25rem 1.25rem 1.75rem;
 }
 
-.rayons__surtitre {
-  margin: 0 0 0.75rem;
-  color: var(--rouge);
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
 .rayons__titre {
   font-size: clamp(1.5rem, 6vw, 3rem);
   margin-bottom: 1.25rem;
